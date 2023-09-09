@@ -5,9 +5,11 @@ import movieLogo from "../assets/homeTitle.webp";
 import { FaPlay } from 'react-icons/fa';
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import styled  from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 
 const Flixit = () => {
     const [isScrolled, setIsScrolled] = useState(false);
+    const navigate = useNavigate();
 
     window.onscroll = () => {
         setIsScrolled(window.pageYOffset === 0 ? false : true);
@@ -24,8 +26,12 @@ const Flixit = () => {
                 <img src={movieLogo} alt="Movie Logo" />
             </div>
             <div className="buttons flex">
-                <button className="flex j-center a-center"><FaPlay /> Play</button>
-                <button className="flex j-center a-center"><AiOutlineInfoCircle /> More Info</button>
+                <button className="flex j-center a-center" onClick={() => navigate("/player")}>
+                    <FaPlay /> Play
+                </button>
+                <button className="flex j-center a-center">
+                    <AiOutlineInfoCircle /> More Info
+                </button>
             </div>
         </div>
       </div>
