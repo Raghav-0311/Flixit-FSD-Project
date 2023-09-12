@@ -7,7 +7,7 @@ import { API_KEY, TMDB_BASE_URL } from "../utils/constants";
 import axios from "axios";
 
 const initialState = {
-  movie: [],
+  movies: [],
   genresLoaded: false,
   genres: [],
 };
@@ -47,8 +47,8 @@ const getRowData = async (api, genres, paging) => {
       data: { results },
     } = await axios.get(`${api}${paging ? `&page=${i}` : ""}`);
     createArrayFromRowData(results, moviesArray, genres);
-    return moviesArray;
   }
+  return moviesArray;
 };
 
 export const fetchMovies = createAsyncThunk(
