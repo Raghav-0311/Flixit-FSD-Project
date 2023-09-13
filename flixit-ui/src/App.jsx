@@ -4,6 +4,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Flixit from './pages/Flixit';
 import Player from './pages/Player';
+import Movies from './pages/Movies';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Route exact path = "/login" element = {<Login />}/>
         <Route exact path = "/signup" element = {<Signup />}/>
         <Route exact path = "/player" element = {<Player />} />
+        <Route exact path = "/movies" element = {<Movies />} />
       </Routes>
     </BrowserRouter>
   )
