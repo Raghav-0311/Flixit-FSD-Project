@@ -2,9 +2,13 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
+const userRoutes = require("./routes/UserRoutes");
 
 const app = express();
 dotenv.config();
+
+app.use(cors());
+app.use(express.json());
 
 const PORT = process.env.PORT;
 // const DB = process.env.DB;
@@ -19,7 +23,6 @@ mongoose
     console.log("DB Connected Successfully !");
   });
 
-app.use(cors());
-app.use(express.json());
+app.use("/api/user", userRoutes);
 
 app.listen(5000, console.log(`Server Started at port ${PORT}...`));
