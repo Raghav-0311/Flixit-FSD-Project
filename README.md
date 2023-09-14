@@ -157,4 +157,4 @@ Join the Flixit community today and unlock a world of entertainment that knows n
 
 
 
-**All Rights Reserver - Raghav Kashyap**
+**All Rights Reserved - Raghav Kashyap**
